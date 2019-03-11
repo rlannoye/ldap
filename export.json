@@ -1,0 +1,8 @@
+
+
+
+
+
+	
+	
+{"count":2,"0":{"cn":{"count":1,"0":"lannoye"},"0":"cn","sn":{"count":1,"0":"remy"},"1":"sn","givenname":{"count":1,"0":"lannoye remy"},"2":"givenname","userpassword":{"count":1,"0":"test"},"3":"userpassword","description":{"count":1,"0":"test"},"4":"description","homedirectory":{"count":1,"0":"\/home\/user"},"5":"homedirectory","uidnumber":{"count":1,"0":"11419"},"6":"uidnumber","gidnumber":{"count":1,"0":"74980"},"7":"gidnumber","uid":{"count":1,"0":"rem"},"8":"uid","objectclass":{"count":6,"0":"top","1":"person","2":"organizationalPerson","3":"inetOrgPerson","4":"posixAccount","5":"shadowAccount"},"9":"objectclass","count":10,"dn":"uid=rem,ou=people,dc=bla,dc=com"},"1":{"cn":{"count":1,"0":"tholliez"},"0":"cn","sn":{"count":1,"0":"alexandre"},"1":"sn","givenname":{"count":1,"0":"tholliez alexandre"},"2":"givenname","userpassword":{"count":1,"0":"ldap"},"3":"userpassword","description":{"count":1,"0":"test"},"4":"description","homedirectory":{"count":1,"0":"\/home\/user"},"5":"homedirectory","uidnumber":{"count":1,"0":"58007"},"6":"uidnumber","gidnumber":{"count":1,"0":"32825"},"7":"gidnumber","uid":{"count":1,"0":"alex"},"8":"uid","objectclass":{"count":6,"0":"top","1":"person","2":"organizationalPerson","3":"inetOrgPerson","4":"posixAccount","5":"shadowAccount"},"9":"objectclass","count":10,"dn":"uid=alex,ou=people,dc=bla,dc=com"}}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Administrateur </title>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<link rel="stylesheet" type="text/css" href="ldap.css">
+	</head>
+
+	<body>
+		<div align="right">
+			<form action="connexionCompte.html" method="post">
+				<input type="submit" value="Déconnexion">
+			</form>
+		</div>
+		<h1> Administrateur </h1>
+		<div class="content">
+			<div id="cadreadd">
+				<div id="texte">
+					<h4>Ajouter</h4>
+					<div class="tabAjout">
+						<form action="ldapAdd.php" method="post">
+							 <p>Nom : <input type="text" name="nom" required /></p>
+							 <p>Prénom : <input type="text" name="prenom" required /></p>
+							 <p>Pseudo : <input type="text" name="pseudo" required /></p>
+							 <p>Password : <input type="password" name="password" required /></p>
+							 <p><input type="submit" value="Ajouter"></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="cadremodify">
+				<div id="texte">
+					<h4>Modifier</h4>
+					<div class="tabAjout">
+						<form action="ldapModify.php" method="post">
+							<p>Pseudo à modifier: <input type="text" name="pseudomod" required /></p>
+							<p>Nouveau nom: <input type="text" name="newNom" required /></p>
+							<p>Nouveau prénom: <input type="text" name="newPrenom" required /></p>
+							<p>Nouveau password: <input type="password" name="newPassword" required /></p>
+							<p><input type="submit" value="Modifier"></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="cadresup">
+				<div id="texte">
+					<h4>Supprimer</h4>
+					<div class="tabSupp">
+						<form action="ldapDelete.php" method="post">
+							 <p>Pseudo à supprimer: <input type="text" name="pseudosup" required /></p>
+							 <p><input type="submit" value="Supprimer"></p>
+						</form>
+						<form action="ldapDelete.php" method="post">
+							<p><input type="submit" value="Tout Supprimer" name="delall"></p>
+						</form>
+					</div>
+				</div>				
+			</div>
+		</div>
+		<br/>
+		<div align="center">
+			<form action="ldapSearch.php" method="post">
+				<input type="submit" value="Utilisateurs">
+			</form>
+		</div>
+		<h1> Groupes </h1>
+		<div class="content">
+			<div id="cadreaddgroup">
+					<div id="texte">
+						<h4>Ajouter</h4>
+						<div class="tabAjout">
+							<form action="ldapAddGroup.php" method="post">
+								 <p>Nom groupe : <input type="text" name="group" required /></p>
+								 <p>Description : <input type="text" name="description" required /></p>
+								 <p><input type="submit" value="Ajouter"></p>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div id="cadremodifygroup">
+					<div id="texte">
+						<h4>Modifier</h4>
+						<div class="tabAjout">
+							<form action="ldapModifyGroup.php" method="post">
+								<p>Groupe à modifier: <input type="text" name="groupmod" required /></p>
+								<p>Nouveau nom: <input type="text" name="newGroup" required /></p>
+								<p>Nouvelle description: <input type="text" name="newDescription" required /></p>
+								<p><input type="submit" value="Modifier"></p>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div id="cadresupgroup">
+					<div id="texte">
+						<h4>Supprimer</h4>
+						<div class="tabSupp">
+							<form action="ldapDeleteGroup.php" method="post">
+								 <p>Groupe à supprimer: <input type="text" name="groupsup" required /></p>
+								 <p><input type="submit" value="Supprimer"></p>
+							</form>
+							<form action="ldapDeleteGroup.php" method="post">
+								<p><input type="submit" value="Tout Supprimer" name="delallgroup"></p>
+							</form>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div align="center">
+			<form action="ldapSearchGroup.php" method="post">
+				<input type="submit" value="Groupes">
+			</form>
+			
+			<form action="export.php" method="post">
+				<input type="submit" value="Export TO JSON" name="export_json">
+			</form>
+			
+			<form action="import.php" enctype="multipart/form-data" method="post">
+				<input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+				 Importer votre json : <input name="userfile" type="file" />
+				<input type="submit" value="Importer" name="import_json"/>
+			</form>
+		</div>
+	</body>
+</html>
